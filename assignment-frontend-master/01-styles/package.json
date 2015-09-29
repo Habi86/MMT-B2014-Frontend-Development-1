@@ -1,0 +1,20 @@
+{
+  "name": "01-styles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run init && npm run styles",
+    "init": "bash bin\\init",
+    "styles": "bash bin\\styles",
+    "styles-lint": "bin\\styles-lint",
+    "watch": "bin\\watch",
+    "start": "npm run watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^3.3.3",
+	"w3c-validate":"0.0.2"
+  }
+}
