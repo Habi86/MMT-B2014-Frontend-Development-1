@@ -6,14 +6,14 @@ import {
   uuid,
   pluralize,
   store
-} from './util'
+  } from './util'
 
 //application.js
 export function init() {
   this.todos = store('todos-jquery');
   this.cacheElements();
   this.bindEvents();
-   new Router({
+  new Router({
     '/:filter': function(filter) {
       this.filter = filter;
       this.render();
@@ -94,7 +94,7 @@ export function getFilteredTodos() {
   if (this.filter === 'active') {
     return this.getActiveTodos();
   }
-   if (this.filter === 'completed') {
+  if (this.filter === 'completed') {
     return this.getCompletedTodos();
   }
   return this.todos;
