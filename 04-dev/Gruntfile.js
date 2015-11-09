@@ -5,8 +5,8 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt)
   require('time-grunt')(grunt)
 
-  const serveStatic = require('serve-static')
-  const config = {
+  var serveStatic = require('serve-static')
+  var config = {
     app: 'app',
     dist: 'dist'
   }
@@ -47,17 +47,17 @@ module.exports = function(grunt) {
           base: '<%= config.dist %>',
           open: true,
           middleware: function(connect, options) {
-            const middlewares = []
+            var middlewares = []
             if (!Array.isArray(options.base)) {
               options.base = [options.base]
             }
-            const directory = options.directory || options.base[options.base.length - 1]
+            var directory = options.directory || options.base[options.base.length - 1]
             options.base.forEach(function(base) {
               middlewares.push(serveStatic(base))
             })
             //middlewares.push(serveStatic(directory))
             middlewares.push(function(req, res) {
-              for (let file, i = 0; i < options.base.length; i++) {
+              for (var file, i = 0; i < options.base.length; i++) {
                 file = options.base + "/index.html"
                 if (grunt.file.exists(file)) {
                   require('fs').createReadStream(file).pipe(res)
