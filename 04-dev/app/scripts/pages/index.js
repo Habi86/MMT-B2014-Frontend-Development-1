@@ -3,6 +3,7 @@ import page from 'page'
 import fetch from 'isomorphic-fetch'
 import url from 'url'
 import tplHome from '../templates/home.hbs'
+import tplDrivers from '../templates/drivers.hbs'
 import tplNotFound from '../templates/not-found.hbs'
 
 const $content = $('#content')
@@ -11,6 +12,10 @@ let globalError
 
 export function home() {
   $content.html(tplHome())
+}
+
+export function drivers() {
+  $content.html(tplDrivers())
 }
 
 export function notFound() {
