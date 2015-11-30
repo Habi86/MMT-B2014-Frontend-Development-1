@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "Hannes Moser <hannes@impossiblearts.com>",
+  "author": "Stefanie Habersatter <shabersatter.mmt-b2014@fh-salzburg.ac.at>",
   "license": "MIT",
   "devDependencies": {
     "mocha": "^2.3.4",
