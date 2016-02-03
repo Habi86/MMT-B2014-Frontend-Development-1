@@ -1,11 +1,6 @@
 [
-  {
-    "label": "Organic Search", "value": 20
-  },
-  {
-    "label": "TechCrunch", "value": 10
-  },
-  {
-    "label": "Hacker News", "value": 70
-  }
+  {"label": "Drupal", "value": 6.2},
+  {"label": "Wordpress", "value": 40.89},
+  {"label": "Joomla!", "value": 25.3},
+  {"label": "TYPO3", "value": 27.6}
 ]

@@ -8,6 +8,8 @@ import tplError from './templates/error.hbs'
 import barchart from './charts/barchart'
 import geo from './charts/geo'
 import circles from './charts/circles'
+import piechart from './charts/piechart'
+
 
 const content = document.getElementById('content')
 
@@ -49,11 +51,12 @@ export function home() {
         courses: coursesData
       })
 
-      // create charts
+      //create charts
       barchart('chart1', driversData)
       geo('chart2', coursesData)
       circles('chart3')
       circles('chart3')
+      piechart('piecontent')
     })
     .catch(err => {
       globalError = err
