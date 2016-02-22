@@ -1,8 +1,16 @@
 import $ from 'jquery'
 import page from 'page'
+import Handlebars from 'hbsfy/runtime'
 import * as pages from './pages'
+import dateFormat from './helpers/date-format'
+import times from 'handlebars-helper-repeat'
+import eq from './helpers/eq'
 
 const $nav = $('#nav')
+
+Handlebars.registerHelper('dateFormat', dateFormat)
+Handlebars.registerHelper('times', times)
+Handlebars.registerHelper('eq', eq)
 
 page('*', function(ctx, next) {
   $nav
@@ -17,16 +25,13 @@ page('*', function(ctx, next) {
 
 page('/', '/home')
 page('/home', pages.home)
+page('/constructors', pages.constructors)
+page('/constructors/:constructor', pages.constructor)
 page('/drivers', pages.drivers)
+page('/drivers/:driver', pages.driver)
+page('/results', pages.results)
+page('/results/:season/:index', pages.result)
+page('/contact', pages.contact)
 page('*', pages.notFound)
 
 page()
-
-
-//page('/', index)
-//page('/user/:user', show)
-//page('/user/:user/edit', edit)
-//page('/user/:user/album', album)
-//page('/user/:user/album/sort', sort)
-//page('*', notfound)
-//page()
